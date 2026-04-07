@@ -41,8 +41,8 @@ export default function About() {
           <div ref={imageRef} className="w-full lg:w-1/2 relative">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative">
               <img 
-                src="https://images.unsplash.com/photo-1544830209-1c9cd1817769?q=80&w=1000&auto=format&fit=crop" 
-                alt="Anak-anak belajar membaca" 
+                src="/images/murid-murid rumah literasi bersama pengajar.jpg" 
+                alt="Murid-murid Rumah Literasi Bersama Pengajar" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent"></div>

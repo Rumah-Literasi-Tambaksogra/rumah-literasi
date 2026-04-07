@@ -7,7 +7,6 @@ import Impact from '../components/Impact';
 import Community from '../components/Community';
 import Gallery from '../components/Gallery';
 import Stories from '../components/Stories';
-import ChatWidget from '../components/ChatWidget';
 
 export const metadata: Metadata = {
   title: 'Membangun Budaya Literasi | Yayasan Literasi Indonesia',
@@ -22,17 +21,14 @@ export default function LiteracyLandingPage() {
         <div className="container mx-auto max-w-7xl flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20 shadow-sm animate-fade-in-down">
           <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tight">
             <BookOpen className="w-6 h-6 text-amber-400" />
-            <span>Yayasan Literasi</span>
+            <span>Rumah Literasi</span>
           </div>
-          <div className="hidden lg:flex gap-8 text-sm font-semibold text-emerald-50">
+          <div className="hidden lg:flex gap-8 text-sm font-semibold text-emerald-50 ml-auto">
             <a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang Kami</a>
             <a href="#program" className="hover:text-amber-400 transition-colors">Program</a>
             <a href="#dampak" className="hover:text-amber-400 transition-colors">Dampak</a>
             <a href="#komunitas" className="hover:text-amber-400 transition-colors">Komunitas</a>
           </div>
-          <button className="bg-amber-400 hover:bg-amber-300 text-emerald-950 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg transition-all hover:-translate-y-0.5">
-            Donasi
-          </button>
         </div>
       </nav>
 
@@ -82,7 +78,7 @@ export default function LiteracyLandingPage() {
         <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3 text-white">
             <BookOpen className="text-amber-400 w-8 h-8" />
-            <span className="text-2xl tracking-tight font-black">Yayasan Literasi</span>
+            <span className="text-2xl tracking-tight font-black">Rumah Literasi Tambaksogra</span>
           </div>
           <ul className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-emerald-200">
             <li><a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang Kami</a></li>
@@ -90,12 +86,9 @@ export default function LiteracyLandingPage() {
             <li><a href="#dampak" className="hover:text-amber-400 transition-colors">Dampak</a></li>
             <li><a href="#" className="hover:text-amber-400 transition-colors">Privasi & Syarat</a></li>
           </ul>
-          <p className="text-sm font-medium">© 2026 Yayasan Literasi.<br className="md:hidden" /> Hak Cipta Dilindungi.</p>
+          <p className="text-sm font-medium">© 2026 Rumah Literasi Tambaksogra.<br className="md:hidden" /> Hak Cipta Dilindungi.</p>
         </div>
       </footer>
-
-      {/* Interactive Chat Widget */}
-      <ChatWidget />
     </main>
   );
 }
