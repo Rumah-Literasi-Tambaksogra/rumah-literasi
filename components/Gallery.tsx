@@ -22,7 +22,8 @@ export default function Gallery() {
     if (headerRef.current) {
       gsap.fromTo(headerRef.current.children,
         { scale: 0.9, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'back.out(1.7)', scrollTrigger: {
+        {
+          scale: 1, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'back.out(1.7)', scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%'
           }
@@ -33,7 +34,8 @@ export default function Gallery() {
     if (gridRef.current) {
       gsap.fromTo(gridRef.current.children,
         { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
+        {
+          opacity: 1, scale: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
             trigger: gridRef.current,
             start: 'top 75%'
           }
@@ -43,7 +45,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50">
+    <section ref={sectionRef} className="py-24 bg-gray-50 overflow-hidden min-h-screen flex flex-col justify-center">
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="text-center mb-16 space-y-4">
           <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Galeri Kegiatan</h2>
@@ -58,9 +60,9 @@ export default function Gallery() {
         <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 md:gap-6 h-[600px]">
           {images.map((img, idx) => (
             <div key={idx} className={`${img.span} relative group overflow-hidden rounded-3xl bg-gray-200`}>
-              <img 
-                src={img.src} 
-                alt={`Galeri Kegiatan ${idx+1}`} 
+              <img
+                src={img.src}
+                alt={`Galeri Kegiatan ${idx + 1}`}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/30 transition-colors duration-300"></div>

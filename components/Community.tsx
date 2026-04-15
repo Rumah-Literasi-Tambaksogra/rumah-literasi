@@ -39,7 +39,8 @@ export default function Community() {
     if (headerRef.current) {
       gsap.fromTo(headerRef.current.children,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%'
           }
@@ -50,7 +51,8 @@ export default function Community() {
     if (activitiesRef.current) {
       gsap.fromTo(activitiesRef.current.children,
         { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
             trigger: activitiesRef.current,
             start: 'top 75%'
           }
@@ -60,7 +62,7 @@ export default function Community() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="komunitas" className="py-24 bg-white relative">
+    <section ref={sectionRef} id="komunitas" className="py-24 bg-white relative overflow-hidden min-h-screen flex flex-col justify-center">
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl space-y-4">
@@ -84,10 +86,10 @@ export default function Community() {
                 <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                   {activity.category}
                 </div>
-                <img 
-                  src={activity.image} 
-                  alt={activity.title} 
-                  className="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700" 
+                <img
+                  src={activity.image}
+                  alt={activity.title}
+                  className="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">{activity.title}</h4>

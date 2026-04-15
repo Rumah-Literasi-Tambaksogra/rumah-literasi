@@ -39,7 +39,8 @@ export default function Programs() {
     if (headerRef.current) {
       gsap.fromTo(headerRef.current.children,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%',
           }
@@ -50,7 +51,8 @@ export default function Programs() {
     if (cardsRef.current) {
       gsap.fromTo(cardsRef.current.children,
         { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
             trigger: cardsRef.current,
             start: 'top 75%',
           }
@@ -60,7 +62,7 @@ export default function Programs() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="program" className="py-24 bg-gray-50">
+    <section ref={sectionRef} id="program" className="py-24 bg-gray-50 overflow-hidden min-h-screen flex flex-col justify-center">
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Program Kami</h2>
@@ -76,9 +78,9 @@ export default function Programs() {
           {programs.map((program, index) => (
             <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col h-full hover:-translate-y-2">
               <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={program.image} 
-                  alt={program.title} 
+                <img
+                  src={program.image}
+                  alt={program.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

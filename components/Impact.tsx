@@ -21,7 +21,8 @@ export default function Impact() {
     if (textRef.current) {
       gsap.fromTo(textRef.current.children,
         { scale: 0.9, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'back.out(1.7)', scrollTrigger: {
+        {
+          scale: 1, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'back.out(1.7)', scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%'
           }
@@ -32,7 +33,8 @@ export default function Impact() {
     if (statsRef.current) {
       gsap.fromTo(statsRef.current.children,
         { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
             trigger: statsRef.current,
             start: 'top 85%'
           }
@@ -42,7 +44,7 @@ export default function Impact() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="dampak" className="py-24 bg-emerald-600 relative overflow-hidden">
+    <section ref={sectionRef} id="dampak" className="py-24 bg-emerald-600 relative overflow-hidden min-h-screen flex flex-col justify-center">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -71,8 +73,8 @@ export default function Impact() {
 
         <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {impacts.map((impact, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 shadow-xl">
-              <div className="text-4xl md:text-5xl font-black text-amber-400 mb-2">{impact.value}</div>
+            <div key={index} className="bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 shadow-xl">
+              <div className="text-2xl sm:text-3xl md:text-5xl font-black text-amber-400 mb-2">{impact.value}</div>
               <div className="text-xl font-bold text-white mb-3">{impact.label}</div>
               <div className="h-px bg-emerald-400/50 w-12 mx-auto mb-3"></div>
               <p className="text-sm text-emerald-100/80">{impact.suffix}</p>

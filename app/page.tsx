@@ -9,7 +9,7 @@ import Gallery from '../components/Gallery';
 import Stories from '../components/Stories';
 
 export const metadata: Metadata = {
-  title: 'Membangun Budaya Literasi | Yayasan Literasi Indonesia',
+  title: 'Rumah Literasi Tambaksogra',
   description: 'Bersama kita tingkatkan minat baca dan akses pendidikan di Indonesia. Bergabunglah dengan kami untuk membangun budaya literasi masa depan.',
 };
 
@@ -19,9 +19,9 @@ export default function LiteracyLandingPage() {
       {/* Navbar Section */}
       <nav className="absolute top-0 left-0 right-0 z-50 text-white p-6">
         <div className="container mx-auto max-w-7xl flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20 shadow-sm animate-fade-in-down">
-          <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tight">
+          <div className="flex items-center gap-2 text-white font-bold text-l tracking-tight">
             <BookOpen className="w-6 h-6 text-amber-400" />
-            <span>Rumah Literasi</span>
+            <span>Rumah Literasi Tambaksogra</span>
           </div>
           <div className="hidden lg:flex gap-8 text-sm font-semibold text-emerald-50 ml-auto">
             <a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang Kami</a>
@@ -51,7 +51,7 @@ export default function LiteracyLandingPage() {
             <div className="absolute -top-24 -right-24 p-8 opacity-5 rotate-12">
               <Heart className="w-96 h-96 text-white" />
             </div>
-            
+
             <div className="relative z-10 max-w-3xl mx-auto space-y-8">
               <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
                 Kitalah Perubahan <br className="hidden md:block" /> yang Mereka Tunggu

@@ -30,7 +30,8 @@ export default function Stories() {
     if (headerRef.current) {
       gsap.fromTo(headerRef.current.children,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%'
           }
@@ -41,7 +42,8 @@ export default function Stories() {
     if (cardsRef.current) {
       gsap.fromTo(cardsRef.current.children,
         { y: 40, opacity: 0, scale: 0.95 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
+        {
+          y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: 'power2.out', scrollTrigger: {
             trigger: cardsRef.current,
             start: 'top 75%'
           }
@@ -51,9 +53,9 @@ export default function Stories() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white overflow-hidden relative">
+    <section ref={sectionRef} className="py-24 bg-white overflow-hidden relative min-h-screen flex flex-col justify-center">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-emerald-50 rounded-l-full -z-10 opacity-50 hidden md:block"></div>
-      
+
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="text-center mb-16 space-y-4">
           <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Cerita Relawan</h2>

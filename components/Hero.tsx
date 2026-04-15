@@ -46,21 +46,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden bg-emerald-600 text-white min-h-[90vh] flex items-center pt-40 pb-12">
+    <section ref={containerRef} className="relative overflow-hidden bg-emerald-600 text-white min-h-screen flex items-center pt-32 pb-12">
       {/* Decorative patterns */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
-      
+
       {/* Blur Blobs */}
       <div ref={blob1Ref} className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-400/30 blur-3xl"></div>
       <div ref={blob2Ref} className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-amber-400/20 blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div ref={contentRef} className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-block">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-emerald-50 text-sm font-semibold tracking-wide backdrop-blur-sm">
-              <BookOpen className="w-4 h-4 text-amber-300" /> Rumah Literasi Tambaksogra
-            </span>
-          </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
             Membangun Budaya Literasi untuk <span className="text-amber-400 underline decoration-amber-400/30 underline-offset-8">Masa Depan</span>
           </h1>
