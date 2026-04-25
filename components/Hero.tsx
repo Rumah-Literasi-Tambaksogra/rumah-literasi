@@ -57,14 +57,14 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div ref={contentRef} className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
-            Membangun Budaya Literasi untuk <span className="text-amber-400 underline decoration-amber-400/30 underline-offset-8">Masa Depan</span>
+            Jelajahi Ribuan Buku dengan <span className="text-amber-400 underline decoration-amber-400/30 underline-offset-8">Pencarian Pintar</span>
           </h1>
           <p className="text-xl md:text-2xl text-emerald-50/90 max-w-2xl mx-auto leading-relaxed font-light">
-            Bersama kita tingkatkan minat baca dan akses pendidikan di Indonesia
+            Didukung teknologi AI terbaru, Rumah Literasi Tambaksogra membantu siswa menemukan inspirasi melalui pencarian pintar
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-12">
             <a href="#" target="_blank" className="group px-8 py-4 w-full sm:w-auto bg-amber-400 text-emerald-950 font-bold rounded-full hover:bg-amber-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
-              Temukan Buku
+              Coba Pencarian Pintar
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
