@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { BookHeart, Globe2, Users } from 'lucide-react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);

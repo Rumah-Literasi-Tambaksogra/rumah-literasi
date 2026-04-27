@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { Quote } from 'lucide-react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function Stories() {
   const sectionRef = useRef<HTMLElement>(null);
