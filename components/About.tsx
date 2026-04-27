@@ -48,17 +48,7 @@ export default function About() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur p-4 rounded-2xl shadow-lg border border-white/20 inline-flex items-center gap-4">
-                  <div className="bg-amber-400 p-3 rounded-full text-emerald-950">
-                    <BookHeart className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm md:text-base">Misi Kami</h4>
-                    <p className="text-xs md:text-sm text-gray-600 font-medium">Buku untuk setiap anak</p>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             {/* Decoration */}
@@ -71,12 +61,12 @@ export default function About() {
             <div className="space-y-4">
               <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Tentang Kami</h2>
               <h3 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                Membuka Jendela Dunia Melalui <span className="text-emerald-600">Literasi</span>
+                Rumah Literasi <span className="text-emerald-600">Tambaksogra</span>
               </h3>
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed">
-              Yayasan Literasi Indonesia didirikan dengan satu keyakinan sederhana: setiap anak, di manapun mereka berada, berhak mendapatkan akses ke buku dan pendidikan yang berkualitas. Kami percaya bahwa membaca adalah fondasi utama bagi kemajuan sebuah bangsa.
+              Rumah Literasi Tambaksogra didirikan dengan satu keyakinan sederhana: setiap anak, di manapun mereka berada, berhak mendapatkan akses ke buku dan pendidikan yang berkualitas. Kami percaya bahwa membaca adalah fondasi utama bagi kemajuan sebuah bangsa.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 pt-6">
@@ -87,8 +77,8 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Menjangkau Pelosok</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Mendistribusikan buku dan materi belajar ke daerah terpencil di Indonesia.</p>
+                  <h4 className="font-bold text-gray-900 mb-1">Visi Kami</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Berisi visi dari Rumah Literasi Tambaksogra.</p>
                 </div>
               </div>
 
@@ -99,8 +89,8 @@ export default function About() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Pemberdayaan Komunitas</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Membangun taman bacaan dan membina relawan lokal secara berkelanjutan.</p>
+                  <h4 className="font-bold text-gray-900 mb-1">Misi Kami</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Berisi misi dari Rumah Literasi Tambaksogra.</p>
                 </div>
               </div>
             </div>
