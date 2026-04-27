@@ -58,9 +58,9 @@ export default function Stories() {
 
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="text-center mb-16 space-y-4">
-          <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Cerita Relawan</h2>
+          <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Cerita Mereka</h2>
           <h3 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            Suara dari <span className="text-amber-500">Garis Depan</span>
+            Apa Kata <span className="text-amber-500">Mereka?</span>
           </h3>
         </div>
 

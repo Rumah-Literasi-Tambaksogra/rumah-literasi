@@ -48,7 +48,7 @@ export default function Gallery() {
     <section ref={sectionRef} className="py-24 bg-gray-50 overflow-hidden min-h-screen flex flex-col justify-center">
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="text-center mb-16 space-y-4">
-          <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Galeri Kegiatan</h2>
+          <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Galeri Kegiatan Kami</h2>
           <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900">
             Momen <span className="text-amber-500">Berharga</span>
           </h3>
