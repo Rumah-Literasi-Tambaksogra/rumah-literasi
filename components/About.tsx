@@ -78,7 +78,7 @@ export default function About() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Visi Kami</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Berisi visi dari Rumah Literasi Tambaksogra.</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">Menjadi wadah bagi anak-anak sekitar untuk mendapat ilmu, pengalaman, dan jejaring melalui kegiatan-kegiatan yang kami selenggarakan. Dengan itu anak-anak sekitar tempat kami dapat lebih mudah mengikuti perkembangan zaman dan keberadaan kami terasa manfaatnya.</p>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ export default function About() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Misi Kami</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Berisi misi dari Rumah Literasi Tambaksogra.</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">Untuk mewujudkan visi tersebut ada beberapa misi yang akan dilaksanakan, diantaranya:</p>
                 </div>
               </div>
             </div>

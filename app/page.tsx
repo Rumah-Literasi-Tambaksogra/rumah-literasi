@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { BookOpen, Heart } from 'lucide-react';
+import { Heart, MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Programs from '../components/Programs';
@@ -19,8 +19,8 @@ export default function LiteracyLandingPage() {
       {/* Navbar Section */}
       <nav className="absolute top-0 left-0 right-0 z-50 text-white p-6">
         <div className="container mx-auto max-w-7xl flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20 shadow-sm animate-fade-in-down">
-          <div className="flex items-center gap-2 text-white font-bold text-l tracking-tight">
-            <BookOpen className="w-6 h-6 text-amber-400" />
+          <div className="flex items-center gap-3 text-white font-bold text-l tracking-tight">
+            <img src="/logo-crop.png" alt="Logo Rumah Literasi Tambaksogra" className="w-8 h-8 object-contain" />
             <span>Rumah Literasi Tambaksogra</span>
           </div>
           <div className="hidden lg:flex gap-8 text-sm font-semibold text-emerald-50 ml-auto">
@@ -74,19 +74,79 @@ export default function LiteracyLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-emerald-950 text-emerald-200/60 py-16">
-        <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-3 text-white">
-            <BookOpen className="text-amber-400 w-8 h-8" />
-            <span className="text-2xl tracking-tight font-black">Rumah Literasi Tambaksogra</span>
+      <footer className="bg-emerald-950 text-emerald-200/80 py-20 border-t border-emerald-900">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            
+            {/* Kolom 1: Logo & Deskripsi Singkat */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 text-white">
+                <img src="/logo-crop.png" alt="Logo Rumah Literasi Tambaksogra" className="w-12 h-12 object-contain" />
+                <span className="text-2xl tracking-tight font-black leading-tight">
+                  Rumah Literasi <br /> Tambaksogra
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed max-w-xs">
+                Wadah kolaborasi untuk meningkatkan literasi dan kualitas pendidikan anak-anak di lingkungan Tambaksogra.
+              </p>
+            </div>
+
+            {/* Kolom 2: Hubungi Kami */}
+            <div className="space-y-6">
+              <h4 className="text-white font-bold text-xl">Hubungi Kami</h4>
+              <ul className="space-y-4 text-sm">
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                  <span>Jl. Sunan Ampel Desa Tambaksogra RT 3 RW 1 Kec. Sumbang, Kab. Banyumas, Jawa Tengah
+</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-amber-400" />
+                  <span>0812-XXXX-XXXX</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-amber-400" />
+                  <span>kontak@tambaksogra.org</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Globe className="w-5 h-5 text-amber-400" />
+                  <span>www.tambaksogra.org</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Kolom 3: Navigasi & Profil */}
+            <div className="flex flex-col space-y-12">
+              <div>
+                <h4 className="text-white font-bold text-xl mb-6">Tentang Kami</h4>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+                  <li><a href="#" className="hover:text-amber-400 transition-colors">Home</a></li>
+                  <li><a href="#program" className="hover:text-amber-400 transition-colors">Program</a></li>
+                  <li><a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang</a></li>
+                  <li><a href="#dampak" className="hover:text-amber-400 transition-colors">Dampak</a></li>
+                  <li><a href="#komunitas" className="hover:text-amber-400 transition-colors">Komunitas</a></li>
+                  <li><a href="#gabung" className="hover:text-amber-400 transition-colors">Donasi</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-white font-bold text-xl mb-4">Profil Lembaga</h4>
+                <div className="inline-flex p-3 bg-emerald-500 rounded-xl text-white hover:bg-emerald-400 transition-all cursor-pointer shadow-lg">
+                  <img src="/logo-crop.png" alt="Ikon Profil Rumah Literasi Tambaksogra" className="w-6 h-6 object-contain" />
+                </div>
+              </div>
+            </div>
+
           </div>
-          <ul className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-emerald-200">
-            <li><a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang Kami</a></li>
-            <li><a href="#program" className="hover:text-amber-400 transition-colors">Program</a></li>
-            <li><a href="#dampak" className="hover:text-amber-400 transition-colors">Dampak</a></li>
-            <li><a href="#" className="hover:text-amber-400 transition-colors">Privasi & Syarat</a></li>
-          </ul>
-          <p className="text-sm font-medium">© 2026 Rumah Literasi Tambaksogra.<br className="md:hidden" /> Hak Cipta Dilindungi.</p>
+
+          {/* Garis Pemisah & Copyright */}
+          <div className="mt-16 pt-8 border-t border-emerald-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
+            <p>© 2026 Rumah Literasi Tambaksogra. Hak Cipta Dilindungi.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-amber-400">Kebijakan Privasi</a>
+              <a href="#" className="hover:text-amber-400">Syarat & Ketentuan</a>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

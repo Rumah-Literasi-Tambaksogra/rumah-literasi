@@ -13,23 +13,23 @@ export default function Community() {
     {
       title: "Festival Membaca Desa",
       category: "Kelas Membaca",
-      location: "Desa Suka Maju, Jawa Barat",
+      location: "Kabupaten Banyumas, Jawa Tengah",
       date: "14 Mei 2026",
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Pelatihan Guru Relawan",
       category: "Pelatihan",
-      location: "Jakarta Selatan",
+      location: "Kabupaten Banyumas, Jawa Tengah",
       date: "22 Mei 2026",
       image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Bazar Buku Murah & Donasi",
       category: "Kegiatan Sosial",
-      location: "Alun-alun Kota",
+      location: "Kabupaten Banyumas, Jawa Tengah",
       date: "05 Juni 2026",
-      image: "https://images.unsplash.com/photo-1524322253456-eeb2576dd20a?q=80&w=800&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1709385283538-d3258a461032?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
@@ -66,16 +66,16 @@ export default function Community() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl space-y-4">
-            <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Kegiatan Komunitas</h2>
+            <h2 className="text-emerald-600 font-bold tracking-wider uppercase text-sm">Kegiatan Sosial</h2>
             <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900">
               Agenda & <span className="text-amber-500">Aktivitas Kami</span>
             </h3>
             <p className="text-gray-600 text-lg">
-              Ikuti berbagai kegiatan sosial, pelatihan, dan kelas membaca di berbagai daerah.
+              Beberapa kegiatan sosial terakhir yang kami lakukan bersama masyarakat sekitar.
             </p>
           </div>
           <button className="px-6 py-3 bg-emerald-50 text-emerald-600 font-bold rounded-full hover:bg-emerald-100 transition-colors w-fit">
-            Lihat Semua Agenda
+            Selengkapnya
           </button>
         </div>
 

@@ -9,10 +9,10 @@ export default function Impact() {
   const statsRef = useRef<HTMLDivElement>(null);
 
   const impacts = [
-    { value: "10.000+", label: "Anak Terjangkau", suffix: "Mendapat akses buku berkualitas" },
-    { value: "50+", label: "Komunitas", suffix: "Binaan di seluruh Indonesia" },
-    { value: "100+", label: "Relawan", suffix: "Aktif mengajar dan membagikan buku" },
-    { value: "25.000+", label: "Buku", suffix: "Didonasikan ke daerah pelosok" }
+    { value: "100+", label: "Siswa Aktif", suffix: "Pelajar dari jenjang SD hingga SMA/SMK" },
+    { value: "500+", label: "Koleksi Buku", suffix: "Buku yang telah terintegrasi dalam sistem pencarian pintar" },
+    { value: "100+", label: "Relawan", suffix: "Penggerak literasi yang aktif mendampingi siswa" },
+    { value: "5.000+", label: "Rekomendasi Pintar", suffix: "Saran buku yang meningkatkan efisiensi pencarian" }
   ];
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Impact() {
         <div ref={textRef} className="text-center text-white mb-16 space-y-4 max-w-2xl mx-auto">
           <h2 className="text-emerald-200 font-bold tracking-wider uppercase text-sm">Dampak Nyata</h2>
           <h3 className="text-3xl md:text-5xl font-extrabold leading-tight">
-            Bersama Membawa <span className="text-amber-400">Perubahan</span>
+            Dampak Nyata dalam <span className="text-amber-400">Angka</span>
           </h3>
           <p className="text-emerald-50 text-lg opacity-90">
             Dukungan Anda telah membantu kami menyebarkan semangat membaca ke ribuan anak Indonesia.
