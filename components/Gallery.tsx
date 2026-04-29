@@ -9,11 +9,11 @@ export default function Gallery() {
   const gridRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    { src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
-    { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop", span: "col-span-1 md:col-span-2 row-span-1 md:row-span-2" },
-    { src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
-    { src: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
-    { src: "https://images.unsplash.com/photo-1544830209-1c9cd1817769?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
+    { src: "/images/kegiatan-siswa-rumah-baca-01.png", span: "col-span-1 row-span-1" },
+    { src: "/images/kegiatan-siswa-rumah-baca-02.png", span: "col-span-1 md:col-span-2 row-span-1 md:row-span-2" },
+    { src: "/images/kegiatan-siswa-rumah-baca-03.png", span: "col-span-1 row-span-1" },
+    { src: "/images/kegiatan-siswa-rumah-baca-04.png", span: "col-span-1 row-span-1" },
+    { src: "/images/perpustakaan-rumah-baca-01.png", span: "col-span-1 row-span-1" },
   ];
 
   useEffect(() => {
