@@ -1,4 +1,6 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Heart, MapPin, Phone, Mail, Globe } from 'lucide-react';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -8,27 +10,64 @@ import Community from '../components/Community';
 import Gallery from '../components/Gallery';
 import Stories from '../components/Stories';
 
-export const metadata: Metadata = {
-  title: 'Rumah Literasi Tambaksogra',
-  description: 'Bersama kita tingkatkan minat baca dan akses pendidikan di Indonesia. Bergabunglah dengan kami untuk membangun budaya literasi masa depan.',
-};
-
 export default function LiteracyLandingPage() {
+  // === State & Logic untuk Navbar Scroll Effect ===
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Sembunyikan jika scroll ke bawah lebih dari 50px, munculkan jika scroll ke atas
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsNavVisible(false);
+      } else {
+        setIsNavVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+  // ===============================================
+
   return (
     <main className="min-h-screen font-sans selection:bg-amber-200 selection:text-emerald-900 bg-gray-50">
-      {/* Navbar Section */}
-      <nav className="absolute top-0 left-0 right-0 z-50 text-white p-6">
-        <div className="container mx-auto max-w-7xl flex justify-between items-center bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/20 shadow-sm animate-fade-in-down">
-          <div className="flex items-center gap-3 text-white font-bold text-l tracking-tight">
-            <img src="/logo-crop.png" alt="Logo Rumah Literasi Tambaksogra" className="w-8 h-8 object-contain" />
-            <span>Rumah Literasi Tambaksogra</span>
+      
+      {/* Navbar Section (Style ala Rockstar Games) */}
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+          isNavVisible ? 'translate-y-0' : '-translate-y-full'
+        } bg-black/40 backdrop-blur-md border-b border-white/10`}
+      >
+        <div className="w-full px-6 py-4 flex justify-between items-center relative">
+          
+          {/* KIRI: Logo Saja */}
+          <div className="flex-shrink-0 z-10">
+            <img src="/logo-crop.png" alt="Logo" className="w-9 h-9 object-contain" />
           </div>
-          <div className="hidden lg:flex gap-8 text-sm font-semibold text-emerald-50 ml-auto">
+
+          {/* TENGAH: Menu Navigasi (Absolute agar persis di tengah seperti Rockstar) */}
+          <div className="hidden lg:flex items-center gap-10 text-sm font-bold text-white tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
             <a href="#tentang-kami" className="hover:text-amber-400 transition-colors">Tentang Kami</a>
             <a href="#program" className="hover:text-amber-400 transition-colors">Program</a>
             <a href="#dampak" className="hover:text-amber-400 transition-colors">Dampak</a>
             <a href="#komunitas" className="hover:text-amber-400 transition-colors">Komunitas</a>
           </div>
+
+          {/* KANAN: Tombol "AI Pintar" */}
+          <div className="flex-shrink-0 z-10 hidden sm:block">
+            <a 
+              href="#" 
+              className="px-6 py-2 text-sm font-bold text-white uppercase tracking-wider border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-300"
+            >
+              AI Pintar
+            </a>
+          </div>
+
         </div>
       </nav>
 
@@ -97,8 +136,7 @@ export default function LiteracyLandingPage() {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                  <span>Jl. Sunan Ampel Desa Tambaksogra RT 3 RW 1 Kec. Sumbang, Kab. Banyumas, Jawa Tengah
-</span>
+                  <span>Jl. Sunan Ampel Desa Tambaksogra RT 3 RW 1 Kec. Sumbang, Kab. Banyumas, Jawa Tengah</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-amber-400" />
